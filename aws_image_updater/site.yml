@@ -1,0 +1,24 @@
+---
+- name: Find Latest Custom Image
+  hosts: 127.0.0.1
+  gather_facts: false
+  tasks:
+  - include_role:
+      name: latest_image
+    when: latest_image == "true"
+
+- name: Build and Update Instance
+  hosts: launched
+  gather_facts: true
+  tasks:
+  - include_role:
+      name: instance_config 
+    when: instance_config == "true"
+
+- name: Build New Custom Image
+  hosts: 127.0.0.1
+  gather_facts: false
+  tasks:
+  - include_role:
+      name: image_creation
+    when: image_creation == "true"
