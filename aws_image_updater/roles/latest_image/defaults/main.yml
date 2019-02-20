@@ -1,0 +1,6 @@
+keypair: yourkeypair
+security_group: yoursecuritygroup
+instance_type: selectsize
+region: yourregion
+subnet: yoursubnet
+owner_id: yourownerid
