@@ -4,3 +4,4 @@ instance_type: selectsize
 region: yourregion
 subnet: yoursubnet
 owner_id: yourownerid
+searchable_tag_name: sometaginyourimages
